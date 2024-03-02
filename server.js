@@ -3,9 +3,8 @@ const app = express();
 
 const port = 3000;
 
-app.use('/', require('./routes/index'));
+app.use('/', require('./routes'));
 
-/* app.use('/', require('./routes')); */
 /*
 app.get('/', lesson1Controller.JessicaRoute); 
 app.get('/Chandler', lesson1Controller.ChandlerRoute); 
