@@ -1,20 +1,15 @@
 const express = require('express');
 const app = express();
+const lesson1Controller = require('./controllers/lesson1');
 
 const port = 3000;
 
 /* app.use('/', require('./routes')); */
-app.get('/', (req, res) => {
-     res.send('Jessica Moore');
-}); 
+app.get('/', lesson1Controller.JessicaRoute); 
 
-app.get('/Chandler', (req, res) => {
-    res.send('Chandler Moore');
-}); 
+app.get('/Chandler', lesson1Controller.ChandlerRoute); 
 
-app.get('/Elyse', (req, res) => {
-    res.send('Elyse Moore');
-}); 
+app.get('/Elyse', lesson1Controller.ElyseRoute); 
 
 app.listen(process.env.port || port);
 console.log('Web Server is listening at port '+ (process.env.port || port));
