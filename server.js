@@ -18,12 +18,3 @@ mongodb.initDb((err) => {
     }
 });
 
-/*
-app.get('/', lesson1Controller.JessicaRoute); 
-app.get('/Chandler', lesson1Controller.ChandlerRoute); 
-app.get('/Elyse', lesson1Controller.ElyseRoute); 
-moved to index.js */
-
-/*
-app.listen(process.env.port || port);
-console.log('Web Server is listening at port '+ (process.env.port || port)); */
