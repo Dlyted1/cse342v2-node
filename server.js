@@ -1,7 +1,10 @@
 const express = require('express');
 
 const mongodb = require('./data/database');
+
 const app = express();
+
+// const swaggerAutogen = require('swagger-autogen')();
 
 const port = process.env.PORT || 3000;
 
