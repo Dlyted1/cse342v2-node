@@ -14,33 +14,11 @@
     "/": {
       "get": {
         "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "parameters": [],
+        "responses": {}
       }
     },
-    "/Chandler": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/Elyse": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
+    
     "/api-docs": {
       "get": {
         "description": "",
@@ -58,6 +36,7 @@
         "produces": [
           "application/json"
         ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -74,16 +53,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "userName": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
-                "name": {
+                "favoriteColor": {
                   "example": "any"
                 },
-                "ipaddress": {
+                "birthday": {
                   "example": "any"
                 }
               }
@@ -91,8 +73,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "201": {
+            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -116,48 +98,72 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "200": {
+            "description": "OK"
           }
         }
-      },
-      "put": {
-        "tags": [],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
+       },
+          "put": {
+            "description": "",
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "required": true,
+                "type": "string"
+              },
+              {
+                "name": "body",
+                "in": "body",
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "firstName": {
+                      "example": "any"
+                    },
+                    "lastName": {
+                      "example": "any"
+                    },
+                    "email": {
+                      "example": "any"
+                    },
+                    "favoriteColor": {
+                      "example": "any"
+                    },
+                    "birthday": {
+                      "example": "any"
+                    }
+                  }
+                }
+              }
+            ],
+            "responses": {
+              "204": {
+                "description": "No Content"
+              },
+              "500": {
+                "description": "Internal Server Error"
+              
+              }
+            }
           },
+          "delete": {
+            "description": "",
+            "parameters": [
+              {
+                "name": "id",
+                "in": "path",
+                "required": true,
+                "type": "string"
+              } 
+            ],
+            "responses": {
+              "204": {
+                "description":"No Content"
+              },
+           
           "500": {
             "description": "Internal Server Error"
-          }
-        }
-      },
-      "delete": {
-        "tags": [],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }
