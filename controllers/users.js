@@ -20,7 +20,20 @@ const getSingle = async (req, res) => {
 
 };
 
+const createUser = async (req, res) => {
+    const user = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        favoriteColor: req.body.favoriteColor,
+        birthday: req.body.birthday
+    }
+}
+
 module.exports = {
     getAll,
-    getSingle
+    getSingle, 
+    createUser,
+    updateUser,
+    deleteUser
 };
